@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Pages */
+.page {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("ankita.jpg") center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.content {
+  background: rgba(0,0,0,0.4);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 90%;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.emoji {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hint {
+  display: block;
+  margin-top: 20px;
+  opacity: 0.7;
+}
+
+/* Music Button */
+.music-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+}
+
+/* Secret message */
+.secret-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #ffb6c1;
+  font-size: 1rem;
+}
+
+.secret-message {
+  display: none;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* Falling flowers */
+.flowers-container span {
+  position: fixed;
+  top: -10%;
+  animation: fall linear infinite;
+  font-size: 1.5rem;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
